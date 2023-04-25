@@ -16,6 +16,8 @@
 		B2331DAA29F86086008E7677 /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2331DA929F86086008E7677 /* Level1.sks */; };
 		B2331DAD29F864E0008E7677 /* BuyThemeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2331DAC29F864E0008E7677 /* BuyThemeScene.swift */; };
 		B2331DAF29F864F5008E7677 /* BuyThemeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2331DAE29F864F5008E7677 /* BuyThemeScene.sks */; };
+		B2331DB229F87178008E7677 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2331DB129F87178008E7677 /* SettingsScene.swift */; };
+		B2331DB429F87189008E7677 /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2331DB329F87189008E7677 /* SettingsScene.sks */; };
 		B259C4ED29F8329B00DE7196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259C4EC29F8329B00DE7196 /* AppDelegate.swift */; };
 		B259C4F329F8329B00DE7196 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259C4F229F8329B00DE7196 /* MenuScene.swift */; };
 		B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259C4F429F8329B00DE7196 /* GameViewController.swift */; };
@@ -33,6 +35,8 @@
 		B2331DA929F86086008E7677 /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		B2331DAC29F864E0008E7677 /* BuyThemeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyThemeScene.swift; sourceTree = "<group>"; };
 		B2331DAE29F864F5008E7677 /* BuyThemeScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BuyThemeScene.sks; sourceTree = "<group>"; };
+		B2331DB129F87178008E7677 /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		B2331DB329F87189008E7677 /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
 		B259C4E929F8329B00DE7196 /* EmperorOfGold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmperorOfGold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B259C4EC29F8329B00DE7196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B259C4F229F8329B00DE7196 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		B2331D9A29F8449B008E7677 /* GameSceneView */ = {
 			isa = PBXGroup;
 			children = (
+				B2331DB029F8714D008E7677 /* SettingsScene */,
 				B2331DAB29F864B2008E7677 /* BuyThemeScene */,
 				B2331DA529F85F6A008E7677 /* GameLevels */,
 				B2331DA029F859A3008E7677 /* LoadScene */,
@@ -133,6 +138,15 @@
 				B2331DAE29F864F5008E7677 /* BuyThemeScene.sks */,
 			);
 			path = BuyThemeScene;
+			sourceTree = "<group>";
+		};
+		B2331DB029F8714D008E7677 /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				B2331DB129F87178008E7677 /* SettingsScene.swift */,
+				B2331DB329F87189008E7677 /* SettingsScene.sks */,
+			);
+			path = SettingsScene;
 			sourceTree = "<group>";
 		};
 		B259C4E029F8329B00DE7196 = {
@@ -226,6 +240,7 @@
 				B2331DAF29F864F5008E7677 /* BuyThemeScene.sks in Resources */,
 				B2331DAA29F86086008E7677 /* Level1.sks in Resources */,
 				B2331D9629F83969008E7677 /* MenuScene.sks in Resources */,
+				B2331DB429F87189008E7677 /* SettingsScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +256,7 @@
 				B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */,
 				B259C4ED29F8329B00DE7196 /* AppDelegate.swift in Sources */,
 				B2331DA829F86068008E7677 /* Level1.swift in Sources */,
+				B2331DB229F87178008E7677 /* SettingsScene.swift in Sources */,
 				B2331DAD29F864E0008E7677 /* BuyThemeScene.swift in Sources */,
 				B2331DA229F859BC008E7677 /* LoadScene.swift in Sources */,
 			);
