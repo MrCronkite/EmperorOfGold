@@ -60,7 +60,7 @@ final class MenuScene: SKScene {
             case "themesButton": openBuyThemeScene()
             case "howToPlayButton": openRulesScene()
             case "startButton": openLevelsScene()
-            case "settingsButton": print("rere")
+            case "settingsButton": openSettingsScene()
             case "wheelOfFortuneButton": print("rere")
             default: continue
             }
@@ -86,6 +86,14 @@ final class MenuScene: SKScene {
     private func openBuyThemeScene() {
         guard let view = self.view else { return }
         guard let scene = SKScene(fileNamed: "BuyThemeScene") else { return }
+        
+        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+        view.ignoresSiblingOrder = true
+    }
+    
+    private func openSettingsScene() {
+        guard let view = self.view else { return }
+        guard let scene = SKScene(fileNamed: "SettingsScene") else { return }
         
         view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
         view.ignoresSiblingOrder = true
