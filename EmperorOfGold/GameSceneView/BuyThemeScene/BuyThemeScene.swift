@@ -37,6 +37,7 @@ final class BuyThemeScene: SKScene {
         
         buttonBuy.position = CGPoint(x: 0, y: -300)
         buttonBuy.size = CGSize(width: buttonBuy.size.width/2.2, height: buttonBuy.size.height/2.2)
+        buttonBuy.name = "buy"
         
         buttonLeft.position = CGPoint(x: -(bounds.size.width/2 - 55), y: 30)
         buttonLeft.size = CGSize(width: 25, height: 25)
@@ -62,11 +63,20 @@ final class BuyThemeScene: SKScene {
         
         for node in touchedNodes.reversed() {
             switch node.name {
-            case "backButton": print("sdsds")
+            case "backButton": openMenuScene()
             case "left": print("sdsds")
             case "right": print("sdsdsds")
+            case "buy": print("buy")
             default: continue
             }
         }
+    }
+    
+    private func openMenuScene() {
+        guard let view = self.view else { return }
+        guard let scene = SKScene(fileNamed: "MenuScene") else { return }
+        
+        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+        view.ignoresSiblingOrder = true
     }
 }
