@@ -9,6 +9,7 @@ import SpriteKit
 
 let menuButtons = SKSpriteNode(imageNamed: "menu")
 let restartButton = SKSpriteNode(imageNamed: "restart")
+let backgroundSprite = SKSpriteNode(imageNamed: "playing field 5_8")
 
 extension SKScene {
     
@@ -18,12 +19,17 @@ extension SKScene {
         menuButtons.zPosition = 4
         menuButtons.name = "menuButtons"
         
+        backgroundSprite.size = CGSize(width: 1000, height: 1000)
+        backgroundSprite.position = CGPoint(x: 0, y: 0)
+        backgroundSprite.zPosition = 3
+        
         restartButton.size = CGSize(width: 325, height: 77)
         restartButton.position = CGPoint(x: 0, y: -70)
         restartButton.zPosition = 4
         restartButton.name = "restartButton"
         
         self.addChild(menuButtons)
+        self.addChild(backgroundSprite)
         self.addChild(restartButton)
     }
     

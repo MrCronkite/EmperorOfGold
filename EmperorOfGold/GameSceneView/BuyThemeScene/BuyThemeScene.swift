@@ -9,6 +9,9 @@ import SpriteKit
 
 final class BuyThemeScene: SKScene {
     
+    private let themesArrey = ["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]
+    var index = 0
+    
     private let backgroudImg = SKSpriteNode(imageNamed: "background")
     private let borderTheme = SKSpriteNode(imageNamed: "text box")
     private let themesSprite = SKSpriteNode(imageNamed: "theme1")
@@ -16,7 +19,6 @@ final class BuyThemeScene: SKScene {
     private let backButton = SKSpriteNode(imageNamed: "back")
     private let buttonLeft = SKSpriteNode(imageNamed: "left")
     private let buttonRight = SKSpriteNode(imageNamed: "right")
-    //private let coin = SKSpriteNode(imageNamed: "coin")
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
@@ -60,13 +62,20 @@ final class BuyThemeScene: SKScene {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         let touchedNodes = self.nodes(at: location)
+       
         
         for node in touchedNodes.reversed() {
             switch node.name {
             case "backButton": openMenuScene()
-            case "left": print("sdsds")
-            case "right": print("sdsdsds")
-            case "buy": print("buy")
+            case "left":
+                if self.index == 10 { index = 0  }
+                self.index += 1
+                themesSprite.texture = SKTexture(imageNamed: themesArrey[self.index])
+            case "right":
+                if self.index <= 0 { self.index = 10 }
+                self.index -= 1
+                themesSprite.texture = SKTexture(imageNamed: themesArrey[self.index])
+            case "buy": buyTheme(self.index)
             default: continue
             }
         }
@@ -78,5 +87,10 @@ final class BuyThemeScene: SKScene {
         
         view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
         view.ignoresSiblingOrder = true
+    }
+    
+    private func buyTheme(_ i: Int){
+        let backgrounds = ["background6", "background1", "background2", "background3", "background4", "background5", "background7", "background8", "background9", "background10" ]
+        R.Themes.backgroundGame = backgrounds[i]
     }
 }

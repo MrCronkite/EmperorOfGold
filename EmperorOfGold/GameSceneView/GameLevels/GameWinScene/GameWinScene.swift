@@ -18,10 +18,15 @@ extension SKScene {
         nextLvlButton.zPosition = 4
         nextLvlButton.name = "nextLvlButton"
         
+        backgroundSprite.size = CGSize(width: 1000, height: 1000)
+        backgroundSprite.position = CGPoint(x: 0, y: 0)
+        backgroundSprite.zPosition = 3
+        
         superWinSprite.size = CGSize(width: 346.81, height: 216.81)
         superWinSprite.position = CGPoint(x: 0, y: 0)
         superWinSprite.zPosition = 4
         
+        self.addChild(backgroundSprite)
         self.addChild(nextLvlButton)
         self.addChild(superWinSprite)
     }

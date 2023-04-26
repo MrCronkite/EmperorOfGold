@@ -9,7 +9,7 @@ import SpriteKit
 
 final class Level1: SKScene {
     
-    private let backgroundImg = SKSpriteNode(imageNamed: "background1")
+    private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
     private let nameLevel = SKSpriteNode(imageNamed: "level1")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_8")
@@ -53,9 +53,9 @@ final class Level1: SKScene {
     }
     
     func gameOvertrue() {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
-//            self.gameWin()
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+            self.gameWin()
+        }
     }
     
 }
