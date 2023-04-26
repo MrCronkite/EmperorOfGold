@@ -23,6 +23,8 @@
 		B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259C4F429F8329B00DE7196 /* GameViewController.swift */; };
 		B259C4FA29F8329D00DE7196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B259C4F929F8329D00DE7196 /* Assets.xcassets */; };
 		B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259C4FB29F8329D00DE7196 /* LaunchScreen.storyboard */; };
+		B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */; };
+		B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		B259C4F429F8329B00DE7196 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B259C4F929F8329D00DE7196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B259C4FC29F8329D00DE7196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelOfFortuneScene.swift; sourceTree = "<group>"; };
+		B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WheelOfFortuneScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		B2331D9A29F8449B008E7677 /* GameSceneView */ = {
 			isa = PBXGroup;
 			children = (
+				B2DA25F329F8FB7000579E42 /* WheelOfFortuneScene */,
 				B2331DB029F8714D008E7677 /* SettingsScene */,
 				B2331DAB29F864B2008E7677 /* BuyThemeScene */,
 				B2331DA529F85F6A008E7677 /* GameLevels */,
@@ -175,6 +180,15 @@
 			path = EmperorOfGold;
 			sourceTree = "<group>";
 		};
+		B2DA25F329F8FB7000579E42 /* WheelOfFortuneScene */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */,
+				B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */,
+			);
+			path = WheelOfFortuneScene;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +249,7 @@
 			files = (
 				B259C4FA29F8329D00DE7196 /* Assets.xcassets in Resources */,
 				B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */,
+				B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */,
 				B2331D9F29F844E6008E7677 /* RulesScene.sks in Resources */,
 				B2331DA429F859CC008E7677 /* LoadScene.sks in Resources */,
 				B2331DAF29F864F5008E7677 /* BuyThemeScene.sks in Resources */,
@@ -252,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2331D9D29F844CA008E7677 /* RulesScene.swift in Sources */,
+				B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */,
 				B259C4F329F8329B00DE7196 /* MenuScene.swift in Sources */,
 				B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */,
 				B259C4ED29F8329B00DE7196 /* AppDelegate.swift in Sources */,

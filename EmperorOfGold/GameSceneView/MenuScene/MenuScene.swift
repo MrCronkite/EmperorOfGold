@@ -61,7 +61,7 @@ final class MenuScene: SKScene {
             case "howToPlayButton": openRulesScene()
             case "startButton": openLevelsScene()
             case "settingsButton": openSettingsScene()
-            case "wheelOfFortuneButton": print("rere")
+            case "wheelOfFortuneButton": openWheelOfFortuneScene()
             default: continue
             }
         }
@@ -99,4 +99,11 @@ final class MenuScene: SKScene {
         view.ignoresSiblingOrder = true
     }
     
+    private func openWheelOfFortuneScene() {
+        guard let view = self.view else { return }
+        guard let scene = SKScene(fileNamed: "WheelOfFortuneScene") else { return }
+        
+        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+        view.ignoresSiblingOrder = true
+    }
 }
