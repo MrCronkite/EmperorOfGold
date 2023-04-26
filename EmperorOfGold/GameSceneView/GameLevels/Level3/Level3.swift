@@ -40,7 +40,7 @@ final class Level3: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
-        gameWinAction(touches)
+        gameWinAction(touches, nextLvl: 4)
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)

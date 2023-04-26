@@ -34,6 +34,8 @@
 		B2DA260929F9B58700579E42 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA260829F9B58700579E42 /* Level3.sks */; };
 		B2DA260C29F9BC3900579E42 /* Level4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA260B29F9BC3900579E42 /* Level4.swift */; };
 		B2DA260E29F9BC4B00579E42 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA260D29F9BC4B00579E42 /* Level4.sks */; };
+		B2DA261129F9C20100579E42 /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA261029F9C20100579E42 /* Level5.swift */; };
+		B2DA261329F9C23900579E42 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA261229F9C23900579E42 /* Level5.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		B2DA260829F9B58700579E42 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
 		B2DA260B29F9BC3900579E42 /* Level4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4.swift; sourceTree = "<group>"; };
 		B2DA260D29F9BC4B00579E42 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		B2DA261029F9C20100579E42 /* Level5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
+		B2DA261229F9C23900579E42 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		B2331DA529F85F6A008E7677 /* GameLevels */ = {
 			isa = PBXGroup;
 			children = (
+				B2DA260F29F9C1D600579E42 /* Level5 */,
 				B2DA260A29F9BC2000579E42 /* Level4 */,
 				B2DA260529F9B56600579E42 /* Level3 */,
 				B2DA260029F9AF7C00579E42 /* Level2 */,
@@ -256,6 +261,15 @@
 			path = Level4;
 			sourceTree = "<group>";
 		};
+		B2DA260F29F9C1D600579E42 /* Level5 */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA261029F9C20100579E42 /* Level5.swift */,
+				B2DA261229F9C23900579E42 /* Level5.sks */,
+			);
+			path = Level5;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,6 +340,7 @@
 				B2331DB429F87189008E7677 /* SettingsScene.sks in Resources */,
 				B2DA260429F9AFA100579E42 /* Level2.sks in Resources */,
 				B2DA260929F9B58700579E42 /* Level3.sks in Resources */,
+				B2DA261329F9C23900579E42 /* Level5.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +355,7 @@
 				B2DA25FA29F90B4100579E42 /* GamePauseScene.swift in Sources */,
 				B2331D9D29F844CA008E7677 /* RulesScene.swift in Sources */,
 				B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */,
+				B2DA261129F9C20100579E42 /* Level5.swift in Sources */,
 				B259C4F329F8329B00DE7196 /* MenuScene.swift in Sources */,
 				B2DA260229F9AF9100579E42 /* Level2.swift in Sources */,
 				B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */,

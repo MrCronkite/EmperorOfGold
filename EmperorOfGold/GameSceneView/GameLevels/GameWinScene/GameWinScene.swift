@@ -31,7 +31,7 @@ extension SKScene {
         self.addChild(superWinSprite)
     }
     
-    func gameWinAction(_ touches: Set<UITouch>) {
+    func gameWinAction(_ touches: Set<UITouch>, nextLvl: Int) {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         let touchedNodes = self.nodes(at: location)
@@ -44,8 +44,9 @@ extension SKScene {
         }
         
         func openNextLevel() {
+            R.Levels.curentLevel = "Level\(nextLvl)"
             guard let view = self.view else { return }
-            guard let scene = SKScene(fileNamed: "MenuScene") else { return }
+            guard let scene = SKScene(fileNamed: R.Levels.curentLevel) else { return }
             
             view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
             view.ignoresSiblingOrder = true
