@@ -9,6 +9,8 @@ import SpriteKit
 
 final class WheelOfFortuneScene: SKScene {
     
+    var randomNumberGlobal = 0
+    
     private let backgroudImg = SKSpriteNode(imageNamed: "background")
     private let backButton = SKSpriteNode(imageNamed: "back")
     private let wheelOfFortune = SKSpriteNode(imageNamed: "wheel1")
@@ -27,6 +29,7 @@ final class WheelOfFortuneScene: SKScene {
         
         wheelOfFortune.position = CGPoint(x: 0, y: 40)
         wheelOfFortune.size = CGSize(width: wheelOfFortune.size.width/2.2, height: wheelOfFortune.size.height/2.2)
+        wheelOfFortune.zRotation = .pi*0.3
         wheelOfFortune.name = "wheelOfFortune"
         
         betButton.position = CGPoint(x: 0, y: -190)
@@ -36,6 +39,8 @@ final class WheelOfFortuneScene: SKScene {
         rollButton.position = CGPoint(x: 0, y: -280)
         rollButton.size = CGSize(width: rollButton.size.width/2.2, height: rollButton.size.height/2.2)
         rollButton.name = "rollButton"
+        
+        
         
         [backButton, backgroudImg, wheelOfFortune, betButton, rollButton].forEach {
             addChild($0)
@@ -50,10 +55,36 @@ final class WheelOfFortuneScene: SKScene {
         for node in touchedNodes.reversed() {
             switch node.name {
             case "backButton": openMenuScene()
-            case "betButton": print("sdsds")
-            case "rollButton": print("sdsdsds")
+            case "betButton": stopSprite()
+            case "rollButton": rollSprite()
             default: continue
             }
+        }
+    }
+    
+    private func rollSprite() {
+        let randomNumber = Int.random(in: 15..<27)
+        self.randomNumberGlobal = randomNumber
+        wheelOfFortune.zRotation = .pi*0.3
+        let rotate = SKAction.rotate(byAngle: CGFloat(randomNumber), duration: 1)
+        wheelOfFortune.run(rotate)
+    }
+    
+    private func stopSprite() {
+        switch randomNumberGlobal {
+        case 15: print("x3")
+        case 16: print("x7")
+        case 17: print("x4")
+        case 18: print("x2")
+        case 19: print("x5")
+        case 20: print("x6")
+        case 21: print("lose")
+        case 22: print("lose")
+        case 23: print("lose")
+        case 24: print("lose")
+        case 25: print("lose")
+        case 26: print("lose")
+        default: return
         }
     }
     
