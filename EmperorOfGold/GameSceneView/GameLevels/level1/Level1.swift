@@ -13,6 +13,7 @@ final class Level1: SKScene {
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
     private let nameLevel = SKSpriteNode(imageNamed: "level1")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_8")
+    var firstSprite: [SKSpriteNode] = []
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
@@ -40,22 +41,34 @@ final class Level1: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
         gameWinAction(touches)
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: self)
-        let touchedNodes = self.nodes(at: location)
-        
-        for node in touchedNodes.reversed() {
-            switch node.name {
-            case "pauseButton": gamePause()
-            default: continue
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            let touchedNodes = self.nodes(at: location)
+            
+            for node in touchedNodes.reversed() {
+                if node.name != nil {
+                    guard let sprite = node as? SKSpriteNode else { return }
+                    firstSprite.append(sprite)
+                    if firstSprite.count == 1 {
+                        return
+                    } else if firstSprite[0].name == firstSprite[1].name {
+                        firstSprite[0].isHidden = true
+                        firstSprite[1].isHidden = true
+                        firstSprite = []
+                    } else if firstSprite.count > 2 {
+                        firstSprite = []
+                    }
+                }
+                
+                if node.name == "pauseButton" { gamePause() }
             }
         }
     }
     
     func gameOvertrue() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4){
-            self.gameWin()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+//            self.gameWin()
+//        }
     }
     
 }
