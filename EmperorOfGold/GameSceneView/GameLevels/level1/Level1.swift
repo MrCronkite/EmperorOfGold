@@ -6,7 +6,6 @@
 //
 
 import SpriteKit
-import GameplayKit
 
 final class Level1: SKScene {
     
@@ -35,5 +34,28 @@ final class Level1: SKScene {
         addChild(pauseButton)
         addChild(borderSprite)
         addChild(backgroundImg)
+        gameOvertrue()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        gamePauseAction(touches)
+        gameWinAction(touches)
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        let touchedNodes = self.nodes(at: location)
+        
+        for node in touchedNodes.reversed() {
+            switch node.name {
+            case "pauseButton": gamePause()
+            default: continue
+            }
+        }
+    }
+    
+    func gameOvertrue() {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
+//            self.gameWin()
+//        }
+    }
+    
 }

@@ -25,6 +25,8 @@
 		B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259C4FB29F8329D00DE7196 /* LaunchScreen.storyboard */; };
 		B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */; };
 		B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */; };
+		B2DA25FA29F90B4100579E42 /* GamePauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25F929F90B4100579E42 /* GamePauseScene.swift */; };
+		B2DA25FD29F91EC700579E42 /* GameWinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25FC29F91EC700579E42 /* GameWinScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		B259C4FC29F8329D00DE7196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelOfFortuneScene.swift; sourceTree = "<group>"; };
 		B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WheelOfFortuneScene.sks; sourceTree = "<group>"; };
+		B2DA25F929F90B4100579E42 /* GamePauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePauseScene.swift; sourceTree = "<group>"; };
+		B2DA25FC29F91EC700579E42 /* GameWinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWinScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 		B2331DA529F85F6A008E7677 /* GameLevels */ = {
 			isa = PBXGroup;
 			children = (
+				B2DA25FB29F91E9E00579E42 /* GameWinScene */,
+				B2DA25F829F90B0000579E42 /* GameOverScene */,
 				B2331DA629F85F97008E7677 /* level1 */,
 			);
 			path = GameLevels;
@@ -187,6 +193,22 @@
 				B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */,
 			);
 			path = WheelOfFortuneScene;
+			sourceTree = "<group>";
+		};
+		B2DA25F829F90B0000579E42 /* GameOverScene */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA25F929F90B4100579E42 /* GamePauseScene.swift */,
+			);
+			path = GameOverScene;
+			sourceTree = "<group>";
+		};
+		B2DA25FB29F91E9E00579E42 /* GameWinScene */ = {
+			isa = PBXGroup;
+			children = (
+				B2DA25FC29F91EC700579E42 /* GameWinScene.swift */,
+			);
+			path = GameWinScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DA25FA29F90B4100579E42 /* GamePauseScene.swift in Sources */,
 				B2331D9D29F844CA008E7677 /* RulesScene.swift in Sources */,
 				B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */,
 				B259C4F329F8329B00DE7196 /* MenuScene.swift in Sources */,
@@ -274,6 +297,7 @@
 				B2331DA829F86068008E7677 /* Level1.swift in Sources */,
 				B2331DB229F87178008E7677 /* SettingsScene.swift in Sources */,
 				B2331DAD29F864E0008E7677 /* BuyThemeScene.swift in Sources */,
+				B2DA25FD29F91EC700579E42 /* GameWinScene.swift in Sources */,
 				B2331DA229F859BC008E7677 /* LoadScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
