@@ -12,4 +12,8 @@ enum R {
         static var backgroundMenu = "background"
         static var backgroundGame = "background1"
     }
+    
+    enum Levels {
+        static var curentLevel = "Level4"
+    }
 }
