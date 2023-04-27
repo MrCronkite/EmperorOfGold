@@ -17,16 +17,16 @@ extension SKScene {
     func gameWin(){
         nextLvlButton.size = CGSize(width: 325, height: 77)
         nextLvlButton.position = CGPoint(x: 0, y: -170)
-        nextLvlButton.zPosition = 4
+        nextLvlButton.zPosition = 5
         nextLvlButton.name = "nextLvlButton"
         
         backgroundSprite.size = CGSize(width: 1000, height: 1000)
         backgroundSprite.position = CGPoint(x: 0, y: 0)
-        backgroundSprite.zPosition = 3
+        backgroundSprite.zPosition = 4
         
         superWinSprite.size = CGSize(width: 346.81, height: 216.81)
         superWinSprite.position = CGPoint(x: 0, y: 0)
-        superWinSprite.zPosition = 4
+        superWinSprite.zPosition = 5
         
         self.addChild(backgroundSprite)
         self.addChild(nextLvlButton)

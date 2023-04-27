@@ -80,7 +80,7 @@ final class MenuScene: SKScene {
     private func openLevelsScene() {
         let level = storage.string(forKey: .curentLvl)
         guard let view = self.view else { return }
-        guard let scene = SKScene(fileNamed: level ?? "Level1" ) else { return }
+        guard let scene = SKScene(fileNamed: level ?? "Level5" ) else { return }
         
         view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
         view.ignoresSiblingOrder = true
