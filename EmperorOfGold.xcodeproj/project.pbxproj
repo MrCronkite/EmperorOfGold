@@ -23,6 +23,14 @@
 		B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259C4F429F8329B00DE7196 /* GameViewController.swift */; };
 		B259C4FA29F8329D00DE7196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B259C4F929F8329D00DE7196 /* Assets.xcassets */; };
 		B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B259C4FB29F8329D00DE7196 /* LaunchScreen.storyboard */; };
+		B2C1689129FA3E3600E3534F /* Level7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1688F29FA3E3500E3534F /* Level7.swift */; };
+		B2C1689229FA3E3600E3534F /* Level7.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2C1689029FA3E3500E3534F /* Level7.sks */; };
+		B2C1689629FA3E4600E3534F /* Level8.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1689429FA3E4600E3534F /* Level8.swift */; };
+		B2C1689729FA3E4600E3534F /* Level8.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2C1689529FA3E4600E3534F /* Level8.sks */; };
+		B2C1689B29FA3E5400E3534F /* Level9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1689929FA3E5400E3534F /* Level9.swift */; };
+		B2C1689C29FA3E5400E3534F /* Level9.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2C1689A29FA3E5400E3534F /* Level9.sks */; };
+		B2C168A029FA3E5F00E3534F /* Level10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C1689E29FA3E5F00E3534F /* Level10.swift */; };
+		B2C168A129FA3E5F00E3534F /* Level10.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2C1689F29FA3E5F00E3534F /* Level10.sks */; };
 		B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */; };
 		B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */; };
 		B2DA25FA29F90B4100579E42 /* GamePauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA25F929F90B4100579E42 /* GamePauseScene.swift */; };
@@ -36,6 +44,8 @@
 		B2DA260E29F9BC4B00579E42 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA260D29F9BC4B00579E42 /* Level4.sks */; };
 		B2DA261129F9C20100579E42 /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA261029F9C20100579E42 /* Level5.swift */; };
 		B2DA261329F9C23900579E42 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA261229F9C23900579E42 /* Level5.sks */; };
+		B2ECEBEC29FA3BCF009FB529 /* Level6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECEBEA29FA3BCF009FB529 /* Level6.swift */; };
+		B2ECEBED29FA3BCF009FB529 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2ECEBEB29FA3BCF009FB529 /* Level6.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +66,14 @@
 		B259C4F429F8329B00DE7196 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B259C4F929F8329D00DE7196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B259C4FC29F8329D00DE7196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2C1688F29FA3E3500E3534F /* Level7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level7.swift; sourceTree = "<group>"; };
+		B2C1689029FA3E3500E3534F /* Level7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level7.sks; sourceTree = "<group>"; };
+		B2C1689429FA3E4600E3534F /* Level8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level8.swift; sourceTree = "<group>"; };
+		B2C1689529FA3E4600E3534F /* Level8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level8.sks; sourceTree = "<group>"; };
+		B2C1689929FA3E5400E3534F /* Level9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level9.swift; sourceTree = "<group>"; };
+		B2C1689A29FA3E5400E3534F /* Level9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level9.sks; sourceTree = "<group>"; };
+		B2C1689E29FA3E5F00E3534F /* Level10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level10.swift; sourceTree = "<group>"; };
+		B2C1689F29FA3E5F00E3534F /* Level10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level10.sks; sourceTree = "<group>"; };
 		B2DA25F429F8FBC300579E42 /* WheelOfFortuneScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelOfFortuneScene.swift; sourceTree = "<group>"; };
 		B2DA25F629F8FBDA00579E42 /* WheelOfFortuneScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WheelOfFortuneScene.sks; sourceTree = "<group>"; };
 		B2DA25F929F90B4100579E42 /* GamePauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePauseScene.swift; sourceTree = "<group>"; };
@@ -69,6 +87,8 @@
 		B2DA260D29F9BC4B00579E42 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 		B2DA261029F9C20100579E42 /* Level5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
 		B2DA261229F9C23900579E42 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		B2ECEBEA29FA3BCF009FB529 /* Level6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level6.swift; sourceTree = "<group>"; };
+		B2ECEBEB29FA3BCF009FB529 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,13 +165,18 @@
 		B2331DA529F85F6A008E7677 /* GameLevels */ = {
 			isa = PBXGroup;
 			children = (
+				B2C1689D29FA3E5F00E3534F /* Level10 */,
+				B2C1689829FA3E5400E3534F /* Level9 */,
+				B2C1689329FA3E4600E3534F /* Level8 */,
+				B2C1688E29FA3E3500E3534F /* Level7 */,
+				B2ECEBE929FA3BCF009FB529 /* Level6 */,
 				B2DA260F29F9C1D600579E42 /* Level5 */,
 				B2DA260A29F9BC2000579E42 /* Level4 */,
 				B2DA260529F9B56600579E42 /* Level3 */,
 				B2DA260029F9AF7C00579E42 /* Level2 */,
+				B2331DA629F85F97008E7677 /* Level1 */,
 				B2DA25FB29F91E9E00579E42 /* GameWinScene */,
 				B2DA25F829F90B0000579E42 /* GamePauseScene */,
-				B2331DA629F85F97008E7677 /* Level1 */,
 			);
 			path = GameLevels;
 			sourceTree = "<group>";
@@ -207,6 +232,42 @@
 				B2331D9829F84442008E7677 /* SupportingFilles */,
 			);
 			path = EmperorOfGold;
+			sourceTree = "<group>";
+		};
+		B2C1688E29FA3E3500E3534F /* Level7 */ = {
+			isa = PBXGroup;
+			children = (
+				B2C1688F29FA3E3500E3534F /* Level7.swift */,
+				B2C1689029FA3E3500E3534F /* Level7.sks */,
+			);
+			path = Level7;
+			sourceTree = "<group>";
+		};
+		B2C1689329FA3E4600E3534F /* Level8 */ = {
+			isa = PBXGroup;
+			children = (
+				B2C1689429FA3E4600E3534F /* Level8.swift */,
+				B2C1689529FA3E4600E3534F /* Level8.sks */,
+			);
+			path = Level8;
+			sourceTree = "<group>";
+		};
+		B2C1689829FA3E5400E3534F /* Level9 */ = {
+			isa = PBXGroup;
+			children = (
+				B2C1689929FA3E5400E3534F /* Level9.swift */,
+				B2C1689A29FA3E5400E3534F /* Level9.sks */,
+			);
+			path = Level9;
+			sourceTree = "<group>";
+		};
+		B2C1689D29FA3E5F00E3534F /* Level10 */ = {
+			isa = PBXGroup;
+			children = (
+				B2C1689E29FA3E5F00E3534F /* Level10.swift */,
+				B2C1689F29FA3E5F00E3534F /* Level10.sks */,
+			);
+			path = Level10;
 			sourceTree = "<group>";
 		};
 		B2DA25F329F8FB7000579E42 /* WheelOfFortuneScene */ = {
@@ -268,6 +329,15 @@
 				B2DA261229F9C23900579E42 /* Level5.sks */,
 			);
 			path = Level5;
+			sourceTree = "<group>";
+		};
+		B2ECEBE929FA3BCF009FB529 /* Level6 */ = {
+			isa = PBXGroup;
+			children = (
+				B2ECEBEA29FA3BCF009FB529 /* Level6.swift */,
+				B2ECEBEB29FA3BCF009FB529 /* Level6.sks */,
+			);
+			path = Level6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +402,15 @@
 				B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */,
 				B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */,
 				B2331D9F29F844E6008E7677 /* RulesScene.sks in Resources */,
+				B2C168A129FA3E5F00E3534F /* Level10.sks in Resources */,
+				B2C1689729FA3E4600E3534F /* Level8.sks in Resources */,
+				B2C1689229FA3E3600E3534F /* Level7.sks in Resources */,
 				B2331DA429F859CC008E7677 /* LoadScene.sks in Resources */,
 				B2DA260E29F9BC4B00579E42 /* Level4.sks in Resources */,
+				B2ECEBED29FA3BCF009FB529 /* Level6.sks in Resources */,
 				B2331DAF29F864F5008E7677 /* BuyThemeScene.sks in Resources */,
 				B2331DAA29F86086008E7677 /* Level1.sks in Resources */,
+				B2C1689C29FA3E5400E3534F /* Level9.sks in Resources */,
 				B2331D9629F83969008E7677 /* MenuScene.sks in Resources */,
 				B2331DB429F87189008E7677 /* SettingsScene.sks in Resources */,
 				B2DA260429F9AFA100579E42 /* Level2.sks in Resources */,
@@ -357,16 +432,21 @@
 				B2DA25F529F8FBC300579E42 /* WheelOfFortuneScene.swift in Sources */,
 				B2DA261129F9C20100579E42 /* Level5.swift in Sources */,
 				B259C4F329F8329B00DE7196 /* MenuScene.swift in Sources */,
+				B2C168A029FA3E5F00E3534F /* Level10.swift in Sources */,
 				B2DA260229F9AF9100579E42 /* Level2.swift in Sources */,
 				B259C4F529F8329B00DE7196 /* GameViewController.swift in Sources */,
 				B259C4ED29F8329B00DE7196 /* AppDelegate.swift in Sources */,
+				B2C1689129FA3E3600E3534F /* Level7.swift in Sources */,
 				B2331DA829F86068008E7677 /* Level1.swift in Sources */,
 				B2331DB229F87178008E7677 /* SettingsScene.swift in Sources */,
 				B2331DAD29F864E0008E7677 /* BuyThemeScene.swift in Sources */,
 				B2DA260729F9B57700579E42 /* Level3.swift in Sources */,
+				B2ECEBEC29FA3BCF009FB529 /* Level6.swift in Sources */,
+				B2C1689B29FA3E5400E3534F /* Level9.swift in Sources */,
 				B2DA25FF29F93E3400579E42 /* Resources.swift in Sources */,
 				B2DA25FD29F91EC700579E42 /* GameWinScene.swift in Sources */,
 				B2331DA229F859BC008E7677 /* LoadScene.swift in Sources */,
+				B2C1689629FA3E4600E3534F /* Level8.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,11 @@
 
 import SpriteKit
 
-final class Level5: SKScene {
+final class Level10: SKScene {
     
     private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
-    private let nameLevel = SKSpriteNode(imageNamed: "level5")
+    private let nameLevel = SKSpriteNode(imageNamed: "level10")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 3_4")
     var sprites: [SKSpriteNode] = []
     var allSpritesName: [SKSpriteNode] = []
@@ -40,7 +40,7 @@ final class Level5: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
-        gameWinAction(touches, nextLvl: 6)
+        gameWinAction(touches, nextLvl: 1)
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)

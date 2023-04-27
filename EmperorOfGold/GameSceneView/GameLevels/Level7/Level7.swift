@@ -1,5 +1,5 @@
 //
-//  Level5.swift
+//  Level2.swift
 //  EmperorOfGold
 //
 //  Created by admin1 on 26.04.23.
@@ -7,12 +7,12 @@
 
 import SpriteKit
 
-final class Level5: SKScene {
+final class Level7: SKScene {
     
     private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
-    private let nameLevel = SKSpriteNode(imageNamed: "level5")
-    private let borderSprite = SKSpriteNode(imageNamed: "playing field 3_4")
+    private let nameLevel = SKSpriteNode(imageNamed: "level7")
+    private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_6")
     var sprites: [SKSpriteNode] = []
     var allSpritesName: [SKSpriteNode] = []
     
@@ -26,7 +26,7 @@ final class Level5: SKScene {
         pauseButton.size = CGSize(width: 50, height: 50)
         pauseButton.name = "pauseButton"
         
-        nameLevel.position = CGPoint(x: 0, y: (bounds.size.height/2-140))
+        nameLevel.position = CGPoint(x: 0, y: (bounds.size.height/2-120))
         nameLevel.size = CGSize(width: nameLevel.size.width/2, height: nameLevel.size.height/2)
         
         borderSprite.position = CGPoint(x: 0, y: 0)
@@ -40,7 +40,7 @@ final class Level5: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
-        gameWinAction(touches, nextLvl: 6)
+        gameWinAction(touches, nextLvl: 8)
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
@@ -56,7 +56,7 @@ final class Level5: SKScene {
                         allSpritesName.append(sprites[0])
                         sprites[0].isHidden = true
                         sprites[1].isHidden = true
-                        if allSpritesName.count == 6 { gameWin() }
+                        if allSpritesName.count == 15 { gameWin() }
                         sprites = []
                     } else {
                         sprites = []

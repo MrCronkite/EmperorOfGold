@@ -1,18 +1,18 @@
 //
-//  Level5.swift
+//  Level6.swift
 //  EmperorOfGold
 //
-//  Created by admin1 on 26.04.23.
+//  Created by admin1 on 25.04.23.
 //
 
 import SpriteKit
 
-final class Level5: SKScene {
+final class Level6: SKScene {
     
     private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
-    private let nameLevel = SKSpriteNode(imageNamed: "level5")
-    private let borderSprite = SKSpriteNode(imageNamed: "playing field 3_4")
+    private let nameLevel = SKSpriteNode(imageNamed: "level6")
+    private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_8")
     var sprites: [SKSpriteNode] = []
     var allSpritesName: [SKSpriteNode] = []
     
@@ -26,7 +26,7 @@ final class Level5: SKScene {
         pauseButton.size = CGSize(width: 50, height: 50)
         pauseButton.name = "pauseButton"
         
-        nameLevel.position = CGPoint(x: 0, y: (bounds.size.height/2-140))
+        nameLevel.position = CGPoint(x: 0, y: (bounds.size.height/2-70))
         nameLevel.size = CGSize(width: nameLevel.size.width/2, height: nameLevel.size.height/2)
         
         borderSprite.position = CGPoint(x: 0, y: 0)
@@ -40,27 +40,26 @@ final class Level5: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
-        gameWinAction(touches, nextLvl: 6)
-        if let touch = touches.first {
-            let location = touch.location(in: self)
-            let touchedNodes = self.nodes(at: location)
-            
-            for node in touchedNodes.reversed() {
-                if node.name == "pauseButton" { gamePause() }
-                if node.name != nil {
-                    guard let sprite = node as? SKSpriteNode else { return }
-                    sprites.append(sprite)
-                    if sprites.count == 1 {
-                        return
-                    } else if sprites[0].name == sprites[1].name && sprites[0].position != sprites[1].position {
-                        allSpritesName.append(sprites[0])
-                        sprites[0].isHidden = true
-                        sprites[1].isHidden = true
-                        if allSpritesName.count == 6 { gameWin() }
-                        sprites = []
-                    } else {
-                        sprites = []
-                    }
+        gameWinAction(touches, nextLvl: 7)
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        let touchedNodes = self.nodes(at: location)
+        
+        for node in touchedNodes.reversed() {
+            if node.name == "pauseButton" { gamePause() }
+            if node.name != nil {
+                guard let sprite = node as? SKSpriteNode else { return }
+                sprites.append(sprite)
+                if sprites.count == 1 {
+                    return
+                } else if sprites[0].name == sprites[1].name && sprites[0].position != sprites[1].position {
+                    allSpritesName.append(sprites[0])
+                    sprites[0].isHidden = true
+                    sprites[1].isHidden = true
+                    if allSpritesName.count == 20 { gameWin() }
+                    sprites = []
+                } else {
+                    sprites = []
                 }
             }
         }

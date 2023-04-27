@@ -1,5 +1,5 @@
 //
-//  Level5.swift
+//  Level4.swift
 //  EmperorOfGold
 //
 //  Created by admin1 on 26.04.23.
@@ -7,12 +7,12 @@
 
 import SpriteKit
 
-final class Level5: SKScene {
+final class Level9: SKScene {
     
     private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
-    private let nameLevel = SKSpriteNode(imageNamed: "level5")
-    private let borderSprite = SKSpriteNode(imageNamed: "playing field 3_4")
+    private let nameLevel = SKSpriteNode(imageNamed: "level9")
+    private let borderSprite = SKSpriteNode(imageNamed: "playing field 4_5")
     var sprites: [SKSpriteNode] = []
     var allSpritesName: [SKSpriteNode] = []
     
@@ -40,7 +40,7 @@ final class Level5: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
-        gameWinAction(touches, nextLvl: 6)
+        gameWinAction(touches, nextLvl: 10)
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
@@ -56,7 +56,7 @@ final class Level5: SKScene {
                         allSpritesName.append(sprites[0])
                         sprites[0].isHidden = true
                         sprites[1].isHidden = true
-                        if allSpritesName.count == 6 { gameWin() }
+                        if allSpritesName.count == 10 { gameWin() }
                         sprites = []
                     } else {
                         sprites = []
@@ -66,3 +66,4 @@ final class Level5: SKScene {
         }
     }
 }
+

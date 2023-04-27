@@ -14,6 +14,6 @@ enum R {
     }
     
     enum Levels {
-        static var curentLevel = "Level1"
+        static var curentLevel = "Level4"
     }
 }
