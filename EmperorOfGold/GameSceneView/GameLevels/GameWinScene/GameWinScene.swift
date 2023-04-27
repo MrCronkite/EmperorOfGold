@@ -10,9 +10,18 @@ import SpriteKit
 let nextLvlButton = SKSpriteNode(imageNamed: "next")
 let superWinSprite = SKSpriteNode(imageNamed: "win")
 
+let scale = SKAction.scale(to: 1.3, duration: 0.1)
+let scale1 = SKAction.scale(to: 1, duration: 0.5)
+let sequence = SKAction.sequence([scale, scale1])
+
+let scaleBtn = SKAction.scale(to: 0.9, duration: 0)
+let sequenceButton = SKAction.sequence([scaleBtn])
+
 private let storage: StorageManagerProtocol = StorageManager()
 
 extension SKScene {
+    
+    
     
     func gameWin(){
         nextLvlButton.size = CGSize(width: 325, height: 77)

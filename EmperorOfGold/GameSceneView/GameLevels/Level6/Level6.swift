@@ -9,14 +9,30 @@ import SpriteKit
 
 final class Level6: SKScene {
     
+    private var arreySprites = [
+        ["1", "2", "3", "4", "5"],
+        ["6", "7", "8", "9", "10"],
+        ["11", "12", "13", "14", "15"],
+        ["16", "17", "18", "19", "20"],
+        ["21", "21", "23", "24", "25"],
+        ["26", "27", "28", "29", "30"],
+        ["31", "32", "33", "34", "35"],
+        ["36", "37", "38", "39", "40"],
+    ]
+    
+    private var index1: [Int] = []
+    private var index2: [Int]  = []
+    
     private let storage: StorageManagerProtocol = StorageManager()
+    
+   
     
     private let backgroundImg = SKSpriteNode(imageNamed: "background1")
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
     private let nameLevel = SKSpriteNode(imageNamed: "level6")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_8")
-    var sprites: [SKSpriteNode] = []
-    var allSpritesName: [SKSpriteNode] = []
+    private var sprites: [SKSpriteNode] = []
+    private var allSpritesName: [SKSpriteNode] = []
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
@@ -45,27 +61,65 @@ final class Level6: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         gamePauseAction(touches)
         gameWinAction(touches, nextLvl: 7)
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: self)
-        let touchedNodes = self.nodes(at: location)
-        
-        for node in touchedNodes.reversed() {
-            if node.name == "pauseButton" { gamePause() }
-            if node.name != nil {
-                guard let sprite = node as? SKSpriteNode else { return }
-                sprites.append(sprite)
-                if sprites.count == 1 {
-                    return
-                } else if sprites[0].name == sprites[1].name && sprites[0].position != sprites[1].position {
-                    allSpritesName.append(sprites[0])
-                    sprites[0].isHidden = true
-                    sprites[1].isHidden = true
-                    if allSpritesName.count == 20 { gameWin() }
-                    sprites = []
-                } else {
-                    sprites = []
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            let touchedNodes = self.nodes(at: location)
+            if index1.count == 2 {
+                index2 = []
+                index1 = []
+            }
+            for node in touchedNodes.reversed() {
+                if node.name == "pauseButton" { gamePause() }
+                if node.name != nil {
+                    node.run(sequence)
+                    guard let sprite = node as? SKSpriteNode else { return }
+                    for arrey in arreySprites {
+                        for i in arrey {
+                            if i == sprite.name {
+                                index2.append( arrey.firstIndex(where: {$0 == i})!)
+                                index1.append( arreySprites.firstIndex(where: {$0 == arrey})!)
+                                
+                            }
+                        }
+                    }
+                    sprites.append(sprite)
+                    if sprites.count == 1 {
+                        return
+                    } else if sprites[0].zPosition == sprites[1].zPosition && sprites[0].position != sprites[1].position {
+                        if index1.count == 1 {
+                            return
+                        } else if arreySprites[index1[1]][index2[0]] == "" || arreySprites[index1[0]][index2[1]] == "" {
+                            win()
+                        } else if index1[0] == index1[1] || index2[0] == index2[1] {
+                            win()
+                        } else if index2[0] == 0 || index2[1] == 0 {
+                            if arreySprites[index1[0]][1] == "" && arreySprites[index1[1]][1] == "" {
+                                win()
+                            } else {
+                                sprites = []
+                            }
+                        } else {
+                            sprites = []
+                        }
+                    } else {
+                        sprites = []
+                    }
                 }
             }
+        }
+    }
+    
+    func win() {
+        allSpritesName.append(sprites[0])
+        arreySprites[index1[0]][index2[0]] = ""
+        arreySprites[index1[1]][index2[1]] = ""
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.sprites[0].isHidden = true
+            self.sprites[1].isHidden = true
+            if self.allSpritesName.count == 20 { self.gameWin() }
+            self.sprites = []
+            self.index2 = []
+            self.index1 = []
         }
     }
 }

@@ -71,15 +71,19 @@ final class BuyThemeScene: SKScene {
         for node in touchedNodes.reversed() {
             switch node.name {
             case "backButton": openMenuScene()
+                node.run(sequenceButton)
             case "left":
                 if self.index == 10 { index = 0  }
                 self.index += 1
                 themesSprite.texture = SKTexture(imageNamed: themesArrey[self.index])
+                node.run(sequence)
             case "right":
                 if self.index <= 0 { self.index = 10 }
                 self.index -= 1
                 themesSprite.texture = SKTexture(imageNamed: themesArrey[self.index])
+                node.run(sequence)
             case "buy": buyTheme(self.index)
+                node.run(sequence)
             default: continue
             }
         }
