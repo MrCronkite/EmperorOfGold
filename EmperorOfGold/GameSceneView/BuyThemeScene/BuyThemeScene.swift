@@ -36,19 +36,21 @@ final class BuyThemeScene: SKScene {
         borderTheme.zPosition = -3
         borderTheme.size = CGSize(width: borderTheme.size.width/2.2, height: borderTheme.size.height/2.2)
         
-        themesSprite.position = CGPoint(x: 0, y: 30)
+        themesSprite.position = CGPoint(x: 2, y: 30)
         themesSprite.size = CGSize(width: themesSprite.size.width/2.2, height: themesSprite.size.height/2.2)
         
         buttonBuy.position = CGPoint(x: 0, y: -300)
         buttonBuy.size = CGSize(width: buttonBuy.size.width/2.2, height: buttonBuy.size.height/2.2)
         buttonBuy.name = "buy"
         
-        buttonLeft.position = CGPoint(x: -(bounds.size.width/2 - 55), y: 30)
+        buttonLeft.position = CGPoint(x: -135, y: 30)
         buttonLeft.size = CGSize(width: 25, height: 25)
+        buttonLeft.zPosition = 2
         buttonLeft.name = "left"
         
-        buttonRight.position = CGPoint(x: bounds.size.width/2 - 57, y: 30)
+        buttonRight.position = CGPoint(x: 135, y: 30)
         buttonRight.size = CGSize(width: 25, height: 25)
+        buttonLeft.zPosition = 2
         buttonRight.name = "right"
         
         addChild(backgroudImg)
