@@ -12,6 +12,8 @@ final class BuyThemeScene: SKScene {
     private let themesArrey = ["theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"]
     var index = 0
     
+    private let storage: StorageManagerProtocol = StorageManager()
+    
     private let backgroudImg = SKSpriteNode(imageNamed: "background")
     private let borderTheme = SKSpriteNode(imageNamed: "text box")
     private let themesSprite = SKSpriteNode(imageNamed: "theme1")
@@ -91,6 +93,7 @@ final class BuyThemeScene: SKScene {
     
     private func buyTheme(_ i: Int){
         let backgrounds = ["background6", "background1", "background2", "background3", "background4", "background5", "background7", "background8", "background9", "background10" ]
-        R.Themes.backgroundGame = backgrounds[i]
+        storage.set(backgrounds[i], forKey: .background)
+       // R.Themes.backgroundGame = backgrounds[i]
     }
 }

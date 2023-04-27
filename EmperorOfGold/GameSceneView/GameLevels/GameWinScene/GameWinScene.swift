@@ -10,6 +10,8 @@ import SpriteKit
 let nextLvlButton = SKSpriteNode(imageNamed: "next")
 let superWinSprite = SKSpriteNode(imageNamed: "win")
 
+private let storage: StorageManagerProtocol = StorageManager()
+
 extension SKScene {
     
     func gameWin(){
@@ -44,9 +46,10 @@ extension SKScene {
         }
         
         func openNextLevel() {
-            R.Levels.curentLevel = "Level\(nextLvl)"
+            storage.set("Level\(nextLvl)", forKey: .curentLvl)
+            let level = storage.string(forKey: .curentLvl)
             guard let view = self.view else { return }
-            guard let scene = SKScene(fileNamed: R.Levels.curentLevel) else { return }
+            guard let scene = SKScene(fileNamed: level ?? "Level1") else { return }
             
             view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
             view.ignoresSiblingOrder = true

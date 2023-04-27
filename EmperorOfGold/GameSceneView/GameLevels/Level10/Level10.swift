@@ -9,7 +9,9 @@ import SpriteKit
 
 final class Level10: SKScene {
     
-    private let backgroundImg = SKSpriteNode(imageNamed: R.Themes.backgroundGame)
+    private let storage: StorageManagerProtocol = StorageManager()
+    
+    private let backgroundImg = SKSpriteNode(imageNamed: "background1")
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
     private let nameLevel = SKSpriteNode(imageNamed: "level10")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 3_4")
@@ -18,6 +20,8 @@ final class Level10: SKScene {
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
+        let background = storage.string(forKey: .background)
+        backgroundImg.texture = SKTexture(imageNamed: background ?? "background1")
         backgroundImg.size = CGSize(width: bounds.size.width, height: bounds.size.height)
         backgroundImg.zPosition = -4
         backgroundImg.position = CGPoint(x: 0, y: 0)

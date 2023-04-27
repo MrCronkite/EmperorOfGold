@@ -9,6 +9,8 @@ import SpriteKit
 
 final class MenuScene: SKScene {
     
+    private let storage: StorageManagerProtocol = StorageManager()
+    
     private let backgroudImg = SKSpriteNode(imageNamed: "background")
     private let themesButton = SKSpriteNode(imageNamed: "themes")
     private let startButton = SKSpriteNode(imageNamed: "start")
@@ -76,8 +78,9 @@ final class MenuScene: SKScene {
     }
     
     private func openLevelsScene() {
+        let level = storage.string(forKey: .curentLvl)
         guard let view = self.view else { return }
-        guard let scene = SKScene(fileNamed: R.Levels.curentLevel) else { return }
+        guard let scene = SKScene(fileNamed: level ?? "Level1" ) else { return }
         
         view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
         view.ignoresSiblingOrder = true
