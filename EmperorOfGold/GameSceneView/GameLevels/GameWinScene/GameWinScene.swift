@@ -21,8 +21,6 @@ private let storage: StorageManagerProtocol = StorageManager()
 
 extension SKScene {
     
-    
-    
     func gameWin(){
         nextLvlButton.size = CGSize(width: 325, height: 77)
         nextLvlButton.position = CGPoint(x: 0, y: -170)
@@ -50,6 +48,7 @@ extension SKScene {
         for node in touchedNodes.reversed() {
             switch node.name {
             case "nextLvlButton": openNextLevel()
+                node.run(sequenceButton)
             default: continue
             }
         }
@@ -59,9 +58,10 @@ extension SKScene {
             let level = storage.string(forKey: .curentLvl)
             guard let view = self.view else { return }
             guard let scene = SKScene(fileNamed: level ?? "Level1") else { return }
-            
-            view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-            view.ignoresSiblingOrder = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+                view.ignoresSiblingOrder = true
+            }
         }
     }
 }

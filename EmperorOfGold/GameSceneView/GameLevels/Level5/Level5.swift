@@ -65,13 +65,13 @@ final class Level5: SKScene {
             for node in touchedNodes.reversed() {
                 if node.name == "pauseButton" { gamePause() }
                 if node.name != nil {
+                    node.run(sequence)
                     guard let sprite = node as? SKSpriteNode else { return }
                     for arrey in arreySprites {
                         for i in arrey {
                             if i == sprite.name {
                                 index2.append( arrey.firstIndex(where: {$0 == i})!)
                                 index1.append( arreySprites.firstIndex(where: {$0 == arrey})!)
-                                
                             }
                         }
                     }
@@ -106,11 +106,13 @@ final class Level5: SKScene {
         allSpritesName.append(sprites[0])
         arreySprites[index1[0]][index2[0]] = ""
         arreySprites[index1[1]][index2[1]] = ""
-        sprites[0].isHidden = true
-        sprites[1].isHidden = true
-        if allSpritesName.count == 6 { gameWin() }
-        sprites = []
-        index2 = []
-        index1 = []
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.sprites[0].isHidden = true
+            self.sprites[1].isHidden = true
+            if self.allSpritesName.count == 6 { self.gameWin() }
+            self.sprites = []
+            self.index2 = []
+            self.index1 = []
+        }
     }
 }

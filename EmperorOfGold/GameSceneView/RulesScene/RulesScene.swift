@@ -38,6 +38,7 @@ final class RulesScene: SKScene {
         let touchedNodes = self.nodes(at: location)
         touchedNodes.reversed().forEach {
             if $0.name == "backButton" {
+                $0.run(sequenceButton)
                 guard let view = self.view else { return }
                 guard let scene = SKScene(fileNamed: "MenuScene") else { return }
                 

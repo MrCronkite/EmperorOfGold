@@ -58,10 +58,9 @@ final class MenuScene: SKScene {
         let touchedNodes = self.nodes(at: location)
         
         for node in touchedNodes.reversed() {
-            let scale = SKAction.scale(to: 0.95, duration: 0)
             switch node.name {
             case "themesButton": openBuyThemeScene()
-                node.run(sequence)
+                node.run(sequenceButton)
             case "howToPlayButton": openRulesScene()
                 node.run(sequenceButton)
             case "startButton": openLevelsScene()

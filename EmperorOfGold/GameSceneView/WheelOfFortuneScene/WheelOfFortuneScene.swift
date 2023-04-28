@@ -40,8 +40,6 @@ final class WheelOfFortuneScene: SKScene {
         rollButton.size = CGSize(width: rollButton.size.width/2.2, height: rollButton.size.height/2.2)
         rollButton.name = "rollButton"
         
-        
-        
         [backButton, backgroudImg, wheelOfFortune, betButton, rollButton].forEach {
             addChild($0)
         }
@@ -55,8 +53,11 @@ final class WheelOfFortuneScene: SKScene {
         for node in touchedNodes.reversed() {
             switch node.name {
             case "backButton": openMenuScene()
+                node.run(sequenceButton)
             case "betButton": stopSprite()
+                node.run(sequence)
             case "rollButton": rollSprite()
+                node.run(sequence)
             default: continue
             }
         }

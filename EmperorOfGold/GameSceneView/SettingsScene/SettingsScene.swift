@@ -67,6 +67,7 @@ final class SettingsScene: SKScene {
         for node in touchedNodes.reversed() {
             switch node.name {
             case "backButton": openMenuScene()
+                node.run(sequenceButton)
             case "left": print("sdsds")
             case "right": print("sdsdsds")
             case "buy": print("buy")
