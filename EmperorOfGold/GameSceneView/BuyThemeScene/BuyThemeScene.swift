@@ -31,6 +31,7 @@ final class BuyThemeScene: SKScene {
         backButton.position = CGPoint(x: -(bounds.size.width/2-50), y: (bounds.size.height/2-50))
         backButton.size = CGSize(width: 50, height: 50)
         backButton.name = "backButton"
+        backButton.zPosition = 3
         
         borderTheme.position = CGPoint(x: 0, y: 30)
         borderTheme.zPosition = -3
@@ -39,7 +40,7 @@ final class BuyThemeScene: SKScene {
         themesSprite.position = CGPoint(x: 2, y: 30)
         themesSprite.size = CGSize(width: themesSprite.size.width/2.2, height: themesSprite.size.height/2.2)
         
-        buttonBuy.position = CGPoint(x: 0, y: -300)
+        buttonBuy.position = CGPoint(x: 0, y: -270)
         buttonBuy.size = CGSize(width: buttonBuy.size.width/2.2, height: buttonBuy.size.height/2.2)
         buttonBuy.name = "buy"
         
