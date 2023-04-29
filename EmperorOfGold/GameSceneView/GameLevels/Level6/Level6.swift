@@ -13,7 +13,7 @@ final class Level6: SKScene {
     
     private let backgroundImg = SKSpriteNode(imageNamed: "background1")
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
-    private let nameLevel = SKSpriteNode(imageNamed: "level1")
+    private let nameLevel = SKSpriteNode(imageNamed: "level6")
     private let borderSprite = SKSpriteNode(imageNamed: "playing field 5_8")
     var sprites: [SKSpriteNode] = []
     var allSpritesName: [SKSpriteNode] = []
