@@ -44,8 +44,8 @@
 		B2DA260E29F9BC4B00579E42 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA260D29F9BC4B00579E42 /* Level4.sks */; };
 		B2DA261129F9C20100579E42 /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DA261029F9C20100579E42 /* Level5.swift */; };
 		B2DA261329F9C23900579E42 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DA261229F9C23900579E42 /* Level5.sks */; };
+		B2DC62A729FD61690037A985 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2DC62A629FD61690037A985 /* Level6.sks */; };
 		B2ECEBEC29FA3BCF009FB529 /* Level6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECEBEA29FA3BCF009FB529 /* Level6.swift */; };
-		B2ECEBED29FA3BCF009FB529 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2ECEBEB29FA3BCF009FB529 /* Level6.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,8 +87,8 @@
 		B2DA260D29F9BC4B00579E42 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 		B2DA261029F9C20100579E42 /* Level5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
 		B2DA261229F9C23900579E42 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		B2DC62A629FD61690037A985 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 		B2ECEBEA29FA3BCF009FB529 /* Level6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level6.swift; sourceTree = "<group>"; };
-		B2ECEBEB29FA3BCF009FB529 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,8 +342,8 @@
 		B2ECEBE929FA3BCF009FB529 /* Level6 */ = {
 			isa = PBXGroup;
 			children = (
+				B2DC62A629FD61690037A985 /* Level6.sks */,
 				B2ECEBEA29FA3BCF009FB529 /* Level6.swift */,
-				B2ECEBEB29FA3BCF009FB529 /* Level6.sks */,
 			);
 			path = Level6;
 			sourceTree = "<group>";
@@ -408,6 +408,7 @@
 			files = (
 				B259C4FA29F8329D00DE7196 /* Assets.xcassets in Resources */,
 				B259C4FD29F8329D00DE7196 /* LaunchScreen.storyboard in Resources */,
+				B2DC62A729FD61690037A985 /* Level6.sks in Resources */,
 				B2DA25F729F8FBDA00579E42 /* WheelOfFortuneScene.sks in Resources */,
 				B2331D9F29F844E6008E7677 /* RulesScene.sks in Resources */,
 				B2C168A129FA3E5F00E3534F /* Level10.sks in Resources */,
@@ -415,7 +416,6 @@
 				B2C1689229FA3E3600E3534F /* Level7.sks in Resources */,
 				B2331DA429F859CC008E7677 /* LoadScene.sks in Resources */,
 				B2DA260E29F9BC4B00579E42 /* Level4.sks in Resources */,
-				B2ECEBED29FA3BCF009FB529 /* Level6.sks in Resources */,
 				B2331DAF29F864F5008E7677 /* BuyThemeScene.sks in Resources */,
 				B2331DAA29F86086008E7677 /* Level1.sks in Resources */,
 				B2C1689C29FA3E5400E3534F /* Level9.sks in Resources */,

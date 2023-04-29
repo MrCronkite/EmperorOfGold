@@ -37,8 +37,8 @@ extension SKScene {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         let touchedNodes = self.nodes(at: location)
-        let scaleBtn = SKAction.scale(to: 0.7, duration: 0.5)
-        let sequenceButton1 = SKAction.sequence([scaleBtn])
+        let scaleBtn1 = SKAction.scale(to: 0.7, duration: 0.5)
+        let sequenceButton1 = SKAction.sequence([scaleBtn1])
         
         for node in touchedNodes.reversed() {
             switch node.name {
@@ -61,11 +61,12 @@ extension SKScene {
         }
         
         func restartScene() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 guard let view = self.view else { return }
                 guard let nameScene = self.scene?.name else { return }
                 guard let scene = SKScene(fileNamed: nameScene ) else { return }
                 let transition = SKTransition.fade(withDuration: 0.5)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 view.presentScene(scene, transition: transition)
                 view.ignoresSiblingOrder = true
             }

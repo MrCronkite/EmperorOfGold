@@ -52,6 +52,7 @@ final class Level2: SKScene {
             for node in touchedNodes.reversed() {
                 if node.name == "pauseButton" { gamePause() }
                 if node.name != nil {
+                    node.run(sequence)
                     guard let sprite = node as? SKSpriteNode else { return }
                     sprites.append(sprite)
                     if sprites.count == 1 {

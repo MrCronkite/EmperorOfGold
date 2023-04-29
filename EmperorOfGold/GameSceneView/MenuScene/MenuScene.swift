@@ -78,40 +78,50 @@ final class MenuScene: SKScene {
         guard let view = self.view else { return }
         guard let scene = SKScene(fileNamed: "RulesScene") else { return }
         
-        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-        view.ignoresSiblingOrder = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+            view.ignoresSiblingOrder = true
+        }
     }
     
     private func openLevelsScene() {
         let level = storage.string(forKey: .curentLvl)
         guard let view = self.view else { return }
-        guard let scene = SKScene(fileNamed: level ?? "Level5" ) else { return }
+        guard let scene = SKScene(fileNamed: level ?? "Level1" ) else { return }
         
-        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-        view.ignoresSiblingOrder = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+            view.ignoresSiblingOrder = true
+        }
     }
     
     private func openBuyThemeScene() {
         guard let view = self.view else { return }
         guard let scene = SKScene(fileNamed: "BuyThemeScene") else { return }
         
-        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-        view.ignoresSiblingOrder = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+            view.ignoresSiblingOrder = true
+        }
     }
     
     private func openSettingsScene() {
         guard let view = self.view else { return }
         guard let scene = SKScene(fileNamed: "SettingsScene") else { return }
         
-        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-        view.ignoresSiblingOrder = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+            view.ignoresSiblingOrder = true
+        }
     }
     
     private func openWheelOfFortuneScene() {
         guard let view = self.view else { return }
         guard let scene = SKScene(fileNamed: "WheelOfFortuneScene") else { return }
         
-        view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
-        view.ignoresSiblingOrder = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            view.presentScene(scene, transition: .moveIn(with: .right, duration: 0.5))
+            view.ignoresSiblingOrder = true
+        }
     }
 }
